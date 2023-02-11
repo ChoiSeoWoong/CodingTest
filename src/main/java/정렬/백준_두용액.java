@@ -27,7 +27,7 @@ public class 백준_두용액 {
         int firstNum = 0;
         int secondNum = 0;
 
-        while (start <= end) {
+        while (start < end) {
             sum = solArr[start] + solArr[end];
             absValue = Math.abs(sum);
 
