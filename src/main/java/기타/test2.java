@@ -8,33 +8,32 @@ public class test2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String input = br.readLine();
-        Stack<Character> stack = new Stack<>();
+        int num = Integer.parseInt(input);
+        Map<String, Integer> countMap = new HashMap<>();
+        PriorityQueue<String> pq = new PriorityQueue<>((a, b) -> {
+            int compare = countMap.get(b) - countMap.get(a);
+            if(compare == 0)
+                return a.compareTo(b);
 
-        System.out.println(solution(input, stack));
-    }
+            return compare;
+        });
 
-    private static String solution(String input, Stack<Character> stack) {
-        for(int i = 0; i < input.length(); i++) {
-            if(input.charAt(i) == '(' || input.charAt(i) == '{' || input.charAt(i) == '[')
-                stack.add(input.charAt(i));
+        for(int i = 0; i < num; i++) {
+            String[] inputArr = br.readLine().split(" ");
 
-            else {
-                if(stack.isEmpty()) {
-                    return "False";
-                }
+            if (inputArr[0].equals("enqueue")) {
+                countMap.put(inputArr[1], countMap.getOrDefault(inputArr[1], 0) + 1);
+                pq.add(inputArr[1]);
 
-                else {
-                    stack.pop();
+            } else {
+                String data = pq.poll();
+                countMap.put(data, countMap.get(data) - 1);
+                System.out.print(data + " ");
+
+                if (pq.isEmpty()) {
+                    System.out.print("*" + " ");
                 }
             }
-        }
-
-        if(stack.isEmpty()) {
-            return "True";
-        }
-
-        else {
-            return "False";
         }
     }
 }
