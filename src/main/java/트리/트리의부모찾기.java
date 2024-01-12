@@ -1,4 +1,4 @@
-package dfs_bfs;
+package 트리;
 
 import java.util.*;
 import java.io.*;
