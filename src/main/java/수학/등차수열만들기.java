@@ -1,7 +1,6 @@
-package 구현;
+package 수학;
 
 import java.util.*;
-import java.io.*;
 
 public class 등차수열만들기 {
     public static void main(String[] args) {

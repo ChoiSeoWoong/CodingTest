@@ -1,7 +1,6 @@
-package 구현;
+package 수학;
 
 import java.util.*;
-import java.io.*;
 
 public class 구구단1 {
     public static void main(String[] args) {

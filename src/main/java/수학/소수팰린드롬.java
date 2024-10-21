@@ -1,6 +1,5 @@
-package 구현;
+package 수학;
 
-import java.util.*;
 import java.io.*;
 
 public class 소수팰린드롬 {

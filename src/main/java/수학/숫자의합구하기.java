@@ -1,6 +1,5 @@
-package 구현;
+package 수학;
 
-import java.util.*;
 import java.io.*;
 
 public class 숫자의합구하기 {

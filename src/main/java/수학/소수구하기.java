@@ -1,4 +1,4 @@
-package 구현;
+package 수학;
 
 import java.util.*;
 import java.io.*;

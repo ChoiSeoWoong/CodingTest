@@ -1,8 +1,7 @@
-package 구현;
+package 수학;
 
 import java.math.BigInteger;
 import java.util.*;
-import java.io.*;
 
 public class 큰수의최대공약수 {
     public static void main(String[] args) {
